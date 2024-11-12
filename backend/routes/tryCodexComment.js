@@ -9,7 +9,7 @@ router.get("/",(req,res)=>{
 
 router.post("/generateComment", async (req, res) => {
     const { code } = req.body;
-    console.log(process.env.API_KEY)
+    
     try {
         // Import the Google Generative AI library dynamically
         const { GoogleGenerativeAI } = await import("@google/generative-ai");
