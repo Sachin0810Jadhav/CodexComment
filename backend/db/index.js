@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://jadhavsachin0810:Sachin%4012@clusterfor100xdev.ha6nh.mongodb.net/CodexComment"
-);
+mongoose.connect(process.env.mongo_url);
 
 const userSchema = mongoose.Schema({
   username: String,
@@ -23,6 +21,6 @@ const historySchema = mongoose.Schema({
   comment: String,
 });
 
-const History = mongoose.model("history",historySchema);
+const History = mongoose.model("history", historySchema);
 
-module.exports = {User,History};
+module.exports = { User, History };
