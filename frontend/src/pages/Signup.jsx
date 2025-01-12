@@ -33,7 +33,7 @@ export default function Signup() {
     if (response.data.msg == "user created successfully") {
       localStorage.setItem("token", response.data.token);
       toast.success(response.data.msg);
-      navigate("/tryCodexComment");
+      navigate("/mainPage");
     } else {
       toast.error(response.data.msg);
     }

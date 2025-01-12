@@ -31,7 +31,7 @@ export default function Signin() {
     if (response.data.msg == "signin scuccessful") {
       localStorage.setItem("token", response.data.token);
       toast.success(response.data.msg);
-      navigate("/tryCodexComment");
+      navigate("/mainPage");
     } else {
       toast.error(response.data.msg);
     }

@@ -17,8 +17,7 @@ const historySchema = mongoose.Schema({
     ref: User,
     required: true,
   },
-  code: String,
-  comment: String,
+  codeComment :String
 });
 
 const History = mongoose.model("history", historySchema);
